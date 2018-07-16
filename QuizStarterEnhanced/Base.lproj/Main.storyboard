@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizStarterEnhanced" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Question Goes Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjQ-DA-095">
+                                <rect key="frame" x="47" y="174" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1l-Um-LOa">
+                                <rect key="frame" x="47" y="420.5" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.71764705882352942" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" red="0.80812817314425767" green="0.033690585609243685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gla-8r-v47"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIk-Qr-RO8">
+                                <rect key="frame" x="47" y="458.5" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.71764705882352942" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button2">
+                                    <color key="titleColor" red="0.80812817309999996" green="0.033690585609999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4b-sO-SNK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64X-t3-P4u">
+                                <rect key="frame" x="47" y="496.5" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.71764705882352942" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button3">
+                                    <color key="titleColor" red="0.80812817309999996" green="0.033690585609999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BT7-Lr-6dv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4U-M3-uuD">
+                                <rect key="frame" x="47" y="534.5" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.71764705882352942" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button4">
+                                    <color key="titleColor" red="0.80812817309999996" green="0.033690585609999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bxA-K5-zlR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-sY-CTn">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0lo-Tq-OuX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBs-xO-m8T">
+                                <rect key="frame" x="16" y="20" width="22" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zBs-xO-m8T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="54J-sZ-1yd"/>
+                            <constraint firstItem="zBs-xO-m8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K16-xH-mfW"/>
+                            <constraint firstItem="Z4U-M3-uuD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="LZd-bY-Huy"/>
+                            <constraint firstItem="FjQ-DA-095" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="MO3-Hv-AMb"/>
+                            <constraint firstItem="64X-t3-P4u" firstAttribute="top" secondItem="LIk-Qr-RO8" secondAttribute="bottom" constant="8" id="Mad-Ns-M3c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E1l-Um-LOa" secondAttribute="trailing" constant="48" id="OMm-Px-1as"/>
+                            <constraint firstItem="E1l-Um-LOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Odn-0f-aRi"/>
+                            <constraint firstItem="LIk-Qr-RO8" firstAttribute="top" secondItem="E1l-Um-LOa" secondAttribute="bottom" constant="8" id="SO3-Br-zZH"/>
+                            <constraint firstItem="LIk-Qr-RO8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Sqw-D9-wl4"/>
+                            <constraint firstItem="64X-t3-P4u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Tw1-ZD-Hn3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4U-M3-uuD" secondAttribute="trailing" constant="48" id="WqV-qb-C61"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="64X-t3-P4u" secondAttribute="trailing" constant="48" id="Yuf-5O-cZ4"/>
+                            <constraint firstItem="Hzc-sY-CTn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIL-cX-770"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z4U-M3-uuD" secondAttribute="bottom" constant="102.5" id="dE2-fk-eND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LIk-Qr-RO8" secondAttribute="trailing" constant="48" id="hwp-Q2-aqp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FjQ-DA-095" secondAttribute="trailing" constant="48" id="lVl-HX-0lV"/>
+                            <constraint firstItem="Hzc-sY-CTn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oJI-ZF-j27"/>
+                            <constraint firstItem="FjQ-DA-095" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="slc-xA-AoW"/>
+                            <constraint firstItem="Z4U-M3-uuD" firstAttribute="top" secondItem="64X-t3-P4u" secondAttribute="bottom" constant="8" id="xuE-qT-4me"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerFour" destination="Z4U-M3-uuD" id="p5P-BU-iaA"/>
+                        <outlet property="answerOne" destination="E1l-Um-LOa" id="vHJ-6J-k3y"/>
+                        <outlet property="answerThree" destination="64X-t3-P4u" id="oCt-aw-vVY"/>
+                        <outlet property="answerTwo" destination="LIk-Qr-RO8" id="nP2-nA-M2M"/>
+                        <outlet property="playButton" destination="Hzc-sY-CTn" id="ABT-aG-egK"/>
+                        <outlet property="questionText" destination="FjQ-DA-095" id="Obr-K1-riU"/>
+                        <outlet property="scoreLabel" destination="zBs-xO-m8T" id="IcB-7r-kup"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
