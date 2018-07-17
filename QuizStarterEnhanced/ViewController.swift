@@ -34,25 +34,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+//Labels
     @IBOutlet weak var questionText: UILabel!
     
-    
+//Buttons
     @IBOutlet weak var answerOne: UIButton!
     @IBOutlet weak var answerTwo: UIButton!
     @IBOutlet weak var answerThree: UIButton!
     @IBOutlet weak var answerFour: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
-    
+ 
+//Button Hiding/Unhiding Functions
     func unhideButtons() {
         answerOne.isHidden = false
         answerTwo.isHidden = false
         answerThree.isHidden = false
         answerFour.isHidden = false
         playButton.isHidden = true
-        
     }
-    
     
     func hideButtons() {
         answerOne.isHidden = true
@@ -60,11 +60,11 @@ class ViewController: UIViewController {
         answerThree.isHidden = true
         answerFour.isHidden = true
     }
-    func prettyButtons() {
-        answerOne.backgroundColor = nil
-    }
+//Main Logic
+    //If the play button is pushed
     @IBAction func playGame(_ sender: UIButton) {
         if sender === playButton {
+            // Load & Play game sound, set round and score to 0 and start the game
             loadGameStartSound()
             playSound()
             round = 0
@@ -72,6 +72,7 @@ class ViewController: UIViewController {
             startGame()
         }
     }
+    // Creates new instance for the number and checks if its already been used
     func getNumber() -> Int {
         let rawNumber = GKRandomSource.sharedRandom().nextInt(upperBound: questions.questions.count)
         if usedNumbers.contains(rawNumber) {
@@ -84,8 +85,9 @@ class ViewController: UIViewController {
         }
         return number
     }
-    
+    // Create the number var
     var number = 0
+    // Grab the number, set the answer buttons and hide the play again button
     func startGame() {
         number = getNumber()
         answerOne.setTitle(questions.possibleAnswers[number][0], for: .normal)
@@ -96,18 +98,23 @@ class ViewController: UIViewController {
         scoreLabel.isHidden = false
         scoreLabel.text = "\(score)"
         
+        //Change the screen text to match the question[number]
+        
         questionText.text = questions.questions[number]
     }
-    
+    // When an answer is selected
     @IBAction func checkAnswer(_ sender: UIButton) {
         let answer = questions.answers[number]
         round += 1
+        // If the button text "String" matches the question answer "String" , then score +1 & print correct
         if (sender === answerOne && answer == questions.possibleAnswers[number][0]) || (sender === answerTwo && answer == questions.possibleAnswers[number][1]) || (sender === answerThree && answer == questions.possibleAnswers[number][2]) || (sender === answerFour && answer == questions.possibleAnswers[number][3]) {
             questionText.text = "Correct!"
             score += 1
+            // Else do this
         }else {
             questionText.text = "Sorry Thats Not The Right Answer!"
         }
+        // Stops the game at 10 rounds
         if round > 9 {
         usedNumbers = [50]
          gameOver()
@@ -118,14 +125,17 @@ class ViewController: UIViewController {
         
     }
     
+    // When the game ends(Above 10 rounds) the play again button is called and other buttons hidden
     func gameOver() {
         hideButtons()
         scoreLabel.text = "\(score)"
+        // Screen text shows your score
         questionText.text = "Congrats you scored \(score)!"
         playButton.isHidden = false
         playButton.setTitle("Play Again?", for: .normal)
         
     }
+    // Delays the next round from starting
     func loadNextRound(delay seconds: Int) {
         // Converts a delay in seconds to nanoseconds as signed 64 bit integer
         let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
@@ -137,12 +147,13 @@ class ViewController: UIViewController {
             self.startGame()
         }
     }
-    
+    // loads the Game sound
     func loadGameStartSound() {
         let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
         let soundUrl = URL(fileURLWithPath: path!)
         AudioServicesCreateSystemSoundID(soundUrl as CFURL, &gameSound)
     }
+    // plays the Game sound
     func playSound() {
         AudioServicesPlaySystemSound(gameSound)
     }
