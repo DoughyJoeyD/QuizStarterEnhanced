@@ -15,6 +15,7 @@
 		582E295820F83A9A00BFD0F8 /* QuizStarterEnhancedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E295720F83A9A00BFD0F8 /* QuizStarterEnhancedTests.swift */; };
 		582E296320F83A9A00BFD0F8 /* QuizStarterEnhancedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E296220F83A9A00BFD0F8 /* QuizStarterEnhancedUITests.swift */; };
 		582E297120F83BE000BFD0F8 /* QuestionsAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E297020F83BE000BFD0F8 /* QuestionsAnswers.swift */; };
+		5835565820FD923400614FFB /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5835565720FD923300614FFB /* GameSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		582E296220F83A9A00BFD0F8 /* QuizStarterEnhancedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStarterEnhancedUITests.swift; sourceTree = "<group>"; };
 		582E296420F83A9A00BFD0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		582E297020F83BE000BFD0F8 /* QuestionsAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswers.swift; sourceTree = "<group>"; };
+		5835565720FD923300614FFB /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				582E294B20F83A9A00BFD0F8 /* LaunchScreen.storyboard */,
 				582E294E20F83A9A00BFD0F8 /* Info.plist */,
 				582E297020F83BE000BFD0F8 /* QuestionsAnswers.swift */,
+				5835565720FD923300614FFB /* GameSound.wav */,
 			);
 			path = QuizStarterEnhanced;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5835565820FD923400614FFB /* GameSound.wav in Resources */,
 				582E294D20F83A9A00BFD0F8 /* LaunchScreen.storyboard in Resources */,
 				582E294A20F83A9A00BFD0F8 /* Assets.xcassets in Resources */,
 				582E294820F83A9900BFD0F8 /* Main.storyboard in Resources */,

@@ -8,9 +8,11 @@
 
 import UIKit
 import GameKit
+import AudioToolbox
 
 class ViewController: UIViewController {
-
+    
+    var gameSound: SystemSoundID = 0
     var firstGame = 0
     let questions = QnA()
     var score = 0
@@ -63,6 +65,8 @@ class ViewController: UIViewController {
     }
     @IBAction func playGame(_ sender: UIButton) {
         if sender === playButton {
+            loadGameStartSound()
+            playSound()
             round = 0
             score = 0
             startGame()
@@ -132,6 +136,15 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
             self.startGame()
         }
+    }
+    
+    func loadGameStartSound() {
+        let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &gameSound)
+    }
+    func playSound() {
+        AudioServicesPlaySystemSound(gameSound)
     }
     
 }
